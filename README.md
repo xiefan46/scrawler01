@@ -1,0 +1,1 @@
+独立完成。主要使用java语言进行开发，目前已经实现了一个简易的多线程爬虫，正在进一步完善功能。目前使用到的框架主要有httpclient、htmlparser、BerkeleyDB等。
