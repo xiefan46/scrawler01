@@ -22,7 +22,10 @@ public class TestGetAreaByHostName {
 			System.out.println("Ip address: "+ipaddress.getHostAddress());
 			IPSeeker seeker = new IPSeeker("./ip数据库/qqwry.dat", "./store");
 			IPLocation location = seeker.getIPLocation(ipaddress.getHostAddress());
+			
 			System.out.println(location.getArea()+":"+location.getCountry());
+			
+			
 		}catch(Exception e){
 			e.printStackTrace();
 		}
