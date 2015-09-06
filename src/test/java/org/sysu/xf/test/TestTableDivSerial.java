@@ -25,7 +25,7 @@ public class TestTableDivSerial {
 	private int totalNumber;
 	
 	//URL正则表达式
-	private String domain;
+	private String domain; //域名
 	
 	private String urlDomainPattern;
 	
@@ -35,6 +35,14 @@ public class TestTableDivSerial {
 	
 	private Pattern patternPost;
 	
-	
+	public void channelParseProcess()
+	{
+		urlDomainPattern = "(http://[^/]*?" + domain + "/)(.*?)";
+		urlPattern = "(http://[^/]*?" + domain + "/[^.]*?).(shtml|html|htm|"
+				+ "shtm|php|asp#|asp|cgi|jsp|aspx)";
+		pattern = Pattern.compile(urlDomainPattern, Pattern.CASE_INSENSITIVE
+				+ Pattern.DOTALL);
+		
+	}
 	
 }
